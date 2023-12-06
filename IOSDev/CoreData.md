@@ -1,6 +1,8 @@
 References:
 
 1. https://ali-akhtar.medium.com/mastering-in-core-data-part-0-5a529c6c5a93
+2. https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/Performance.html
+3. https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Predicates/AdditionalChapters/Introduction.html#//apple_ref/doc/uid/TP40001789
 
 ---
 > Note:
