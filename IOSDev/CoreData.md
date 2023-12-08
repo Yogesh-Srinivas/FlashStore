@@ -23,6 +23,16 @@ Managed Object Context
 > Its primary responsibility is to manage a collection of Managed Objects (Entities). A Managed Object Context maintains the state of entities, typically in memory.
 > 
 >  It provides Caching, Change tracking, Lazy loading, Redo, Undo and validation features
+>
+> **Multiple Context:**
+>
+> **Importing Data:** If you're importing data from a file or a network request, you can create a separate managed object context to perform this task on a background queue. This allows the main thread to remain responsive and the UI to update smoothly.
+> 
+> **Batch Operations:** If you're performing batch operations on a large number of objects, you can use a separate managed object context to perform these operations on a background queue. This prevents the main thread from being blocked and the UI from stuttering.
+> 
+> **Undoable Operations:** If you're performing operations that the user might want to undo, you can use a child managed object context. The child context can discard its changes if the user decides to undo the operation, without affecting the main context.
+> 
+> **Concurrency:** If you're working with multiple threads, you should create a separate managed object context for each thread. This ensures that each thread has its own managed object context and prevents conflicts between threads.
 
 ![Bisection of Stack](https://miro.medium.com/v2/resize:fit:640/format:webp/1*Ufa0bJXh2a6CfBZk-AeBCQ.png)
 
