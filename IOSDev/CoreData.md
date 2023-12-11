@@ -49,3 +49,29 @@ Persistent store
 > We can make multiple persistent stores per stack
 >
 > Core Data offers three native file types for a persistent store: binary, XML, and SQLite. You can implement your own store type if you want Core Data to interoperate with a custom file format or server
+
+Save
+
+> Save method moved all data from NSManagedObjectContext(memory) to persistent store (disk).
+> 
+> Now NSManagedObjectContext cached this data. Next time if you want to fetch this data it first check from cache (NSManagedObjectContext) if it found, it will return from cache else it will go to the persistent store which would take more time than fetching from cache.
+
+Perform and Perform and Wait:  [Ref](https://cocoacasts.com/more-core-data-and-concurrency)
+
+> A managed object context should only be accessed from the thread it's associated with.
+> 
+> If you invoke init(concurrencyType:) and pass in privateQueueConcurrencyType as the concurrency type, Core Data instantiates the managed object context with a private queue. In other words, the managed object context is created on a background thread even though you may have instantiated it on the main thread.
+> 
+> **perform(_:)**
+> **performAndWait(_:)**
+> 
+> 1. These methods guarantee that the closure you hand it is executed on the queue the managed object context is associated with.
+>
+> 2. The perform(_:) method schedules the closure and immediately returns control. It doesn't wait for the closure to finish execution.
+>
+> 3. performAndWait(_:) schedules the closures and returns control when the closure has finished executing.
+>
+> 4. In other words, performAndWait(_:) executes the closure synchronously whereas perform(_:) executes the closure asynchronously.
+
+  
+
