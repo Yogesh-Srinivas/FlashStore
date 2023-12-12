@@ -88,6 +88,24 @@ Relationship Between Entities in Core Data:  [Ref](https://ali-akhtar.medium.com
 > **Direction** → Most object relationships are inherently bidirectional. If a department has a To — Many relationships to the Employees who work in a Department, there is an inverse relationship from an Employee to the Department that is To-One . **The recommended approach is to model relationships in both directions and specify the inverse relationship appropriately.** Core Data uses this information to ensure the consistency of the object graph if a change is made
 > 
 > **Delete Rule** → A relationship’s delete rule specifies what should happen on the destination Entity if an attempt is made to delete the source object.
+> 1. **Deny** → If there is at least one object at the relationship destination (employees), do not delete the source object (department).
+>
+> 2. **Nullify** → Remove the relationship between the objects, but do not delete either object.
+>
+> 3. **Cascade** → Delete the objects at the destination of the relationship when you delete the source.
+>
+> 4. **No Action** → Do nothing to the object at the destination of the relationship.
+
+CoreData Validations
+
+> The validation constraints are applied by Core Data **only during a save operation or upon request.** (you can invoke the validation methods directly at any time it makes sense for your application flow)
+>
+> You can request validation before calling save method throw validateForInsert(), validateForUpdate() instance method on Entity itself and you can override this method to apply custom validation with your code.
+>
+
+Fetch Request
+
+![Fetch Request](https://miro.medium.com/v2/resize:fit:720/format:webp/1*V5MJAfRJtODRyu52-RK-Rg.png)
 
   
 
