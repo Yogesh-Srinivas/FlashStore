@@ -73,5 +73,21 @@ Perform and Perform and Wait:  [Ref](https://cocoacasts.com/more-core-data-and-c
 >
 > 4. In other words, performAndWait(_:) executes the closure synchronously whereas perform(_:) executes the closure asynchronously.
 
+Relationship Between Entities in Core Data:  [Ref](https://ali-akhtar.medium.com/mastering-in-coredata-part-5-relationship-between-entities-in-core-data-b8fea1b50efb)
+
+> **Destination entity** → Destination Entity name you want to create relationship with
+>
+> **Cardinality** → whether a relationship is One-To-One, Many-To-One
+> 
+> **Optional** → relationship can be NULL / NOT NULL
+> 
+> **Transient** → In memory usage
+> 
+> **Limit** → If it’s a to-many, are there maximum or minimum numbers of objects that can be in the relationship? (The lower limit does not have to be zero)
+> 
+> **Direction** → Most object relationships are inherently bidirectional. If a department has a To — Many relationships to the Employees who work in a Department, there is an inverse relationship from an Employee to the Department that is To-One . **The recommended approach is to model relationships in both directions and specify the inverse relationship appropriately.** Core Data uses this information to ensure the consistency of the object graph if a change is made
+> 
+> **Delete Rule** → A relationship’s delete rule specifies what should happen on the destination Entity if an attempt is made to delete the source object.
+
   
 
