@@ -125,6 +125,13 @@ References:
 >    - If we do lazy loading or ask Managed Object Context to fetch data in faults What it will do it will return 1000 records metadata information (contains information for tracking) only which will be very fast and will not take much memory.
 >    -  The default value of returnsObjectsAsFaults is true. This setting is not used if the result type is NSManagedObjectIDResultType, as object IDs do not have property values.
 >    -  You can set returnsObjectsAsFaults to false to gain a performance benefit if you know you will need to access the property values from the returned objects immediately. In short if you want to fetch objects and immediately populate fields there is no purpose of lazy loading at that time. Since firing a fault relative to normal could be expensive.
+> - **Which properties to fetch**
+>    - A collection of either property descriptions or string property names that specify which properties should be returned by the fetch.
+>    - Using propertiesToFetch array type property in NSFetchRequest we tell Managed Object Context to bring only these properties.
+>    - If we make managedObjectResultType result type and used propertiesTofetch feature it will do partial faulting which means it will load only those properties in memory which is defined in the propertiesTofetch list and the properties which is not defined will not be instantiated or loaded into memory .
+>    - **Note :**
+>      * This partial fault condition will applicable if returnsObjectsAsFaults = true.
+>      *  properties to fetch works with only managedObjectResultType and dictionaryResultType, as in these we only expect property.
 >    
 > **Result type of the Fetch Request** [Ref](https://ali-akhtar.medium.com/mastering-in-coredata-part-9-nsfetchrequest-d9ad991355d9)
 > 
