@@ -132,6 +132,10 @@ References:
 >    - **Note :**
 >      * This partial fault condition will applicable if returnsObjectsAsFaults = true.
 >      *  properties to fetch works with only managedObjectResultType and dictionaryResultType, as in these we only expect property.
+>      *  Application will crash if you add relationship having ToMany type in the propertiesToFetch list.
+> - **Limit the Fetch Results**
+>   - The fetch limit specifies the maximum number of objects that a request should return when executed.
+>   - It has a performance benefits if your backend database is SQL 
 >    
 > **Result type of the Fetch Request** [Ref](https://ali-akhtar.medium.com/mastering-in-coredata-part-9-nsfetchrequest-d9ad991355d9)
 > 
