@@ -118,6 +118,12 @@ Fetch Request
 > **Optimizations**
 >  - As we know, We can make multiple persistent stores per stack. The fetch request can be modified to search particular stores using the setAffectedStores: method on an NSFetchRequest.
 >  - When you’re creating an object, you can assign the entity to a particular store using the assignObject:toPersisentStore: method on NSManagedObjectContext.
+>  - **Return objects as (Lazy load or Fault):** [Ref](https://ali-akhtar.medium.com/mastering-in-coredata-part-10-nsfetchrequest-a011684dd8f7)
+>    - NSFetchRequest has a property “returnsObjectsAsFaults” which return faulty objects.
+>    - Faulting is one of the techniques that core data uses to keep its memory low without sacrificing performance and also decreases the fetch objects response time.
+>    - The idea is simple, only load data when it’s needed.
+>    - If we do lazy loading or ask Managed Object Context to fetch data in faults What it will do it will return 1000 records metadata information (contains information for tracking) only which will be very fast and will not take much memory.
+>    -  
 >    
 > **Result type of the Fetch Request** [Ref](https://ali-akhtar.medium.com/mastering-in-coredata-part-9-nsfetchrequest-d9ad991355d9)
 > 
