@@ -18,7 +18,7 @@ References:
 
 ![CoreData Stack](https://docs-assets.developer.apple.com/published/8fc7c1ecbc/35317515-fd0c-418f-862d-d81efd29ed29.png)
 
-Managed Object Context
+### Managed Object Context
 
 >  - Its primary responsibility is to manage a collection of Managed Objects (Entities). A Managed Object Context maintains the state of entities, typically in memory.
 > 
@@ -36,11 +36,11 @@ Managed Object Context
 
 ![Bisection of Stack](https://miro.medium.com/v2/resize:fit:640/format:webp/1*Ufa0bJXh2a6CfBZk-AeBCQ.png)
 
-Persistent Store Coordinator (PSC)
+### Persistent Store Coordinator (PSC)
 
 > - The persistent store coordinator role is to manage multiple/single stores and present to its managed object contexts the facade of a single unified store as shown below in the figure coordinator communicating to multiple stores.
 
-Persistent store
+### Persistent store
 
 > - You can think of a persistent store as a database file (Sqlite) where individual records each hold the last-saved values of a managed object (Entity).
 >
@@ -50,13 +50,13 @@ Persistent store
 >
 > - Core Data offers three native file types for a persistent store: binary, XML, and SQLite. You can implement your own store type if you want Core Data to interoperate with a custom file format or server
 
-Save
+### Save
 
 > - Save method moved all data from NSManagedObjectContext(memory) to persistent store (disk).
 > 
 > - Now NSManagedObjectContext cached this data. Next time if you want to fetch this data it first check from cache (NSManagedObjectContext) if it found, it will return from cache else it will go to the persistent store which would take more time than fetching from cache.
 
-Perform and Perform and Wait:  [Ref](https://cocoacasts.com/more-core-data-and-concurrency)
+### Perform and Perform and Wait:  [Ref](https://cocoacasts.com/more-core-data-and-concurrency)
 
 > - A managed object context should only be accessed from the thread it's associated with.
 > 
@@ -73,7 +73,7 @@ Perform and Perform and Wait:  [Ref](https://cocoacasts.com/more-core-data-and-c
 >
 > 4. In other words, performAndWait(_:) executes the closure synchronously whereas perform(_:) executes the closure asynchronously.
 
-Relationship Between Entities in Core Data:  [Ref](https://ali-akhtar.medium.com/mastering-in-coredata-part-5-relationship-between-entities-in-core-data-b8fea1b50efb)
+### Relationship Between Entities in Core Data:  [Ref](https://ali-akhtar.medium.com/mastering-in-coredata-part-5-relationship-between-entities-in-core-data-b8fea1b50efb)
 
 > **Destination entity** → Destination Entity name you want to create relationship with
 >
@@ -96,14 +96,14 @@ Relationship Between Entities in Core Data:  [Ref](https://ali-akhtar.medium.com
 >
 > 4. **No Action** → Do nothing to the object at the destination of the relationship.
 
-CoreData Validations
+### CoreData Validations
 
 > - The validation constraints are applied by Core Data **only during a save operation or upon request.** (you can invoke the validation methods directly at any time it makes sense for your application flow)
 >
 > - You can request validation before calling save method throw validateForInsert(), validateForUpdate() instance method on Entity itself and you can override this method to apply custom validation with your code.
 >
 
-Fetch Request
+### Fetch Request
 
 ![Fetch Request](https://miro.medium.com/v2/resize:fit:720/format:webp/1*V5MJAfRJtODRyu52-RK-Rg.png)
 
@@ -123,7 +123,8 @@ Fetch Request
 >    - Faulting is one of the techniques that core data uses to keep its memory low without sacrificing performance and also decreases the fetch objects response time.
 >    - The idea is simple, only load data when it’s needed.
 >    - If we do lazy loading or ask Managed Object Context to fetch data in faults What it will do it will return 1000 records metadata information (contains information for tracking) only which will be very fast and will not take much memory.
->    -  
+>    -  The default value of returnsObjectsAsFaults is true. This setting is not used if the result type is NSManagedObjectIDResultType, as object IDs do not have property values.
+>    -  You can set returnsObjectsAsFaults to false to gain a performance benefit if you know you will need to access the property values from the returned objects immediately. In short if you want to fetch objects and immediately populate fields there is no purpose of lazy loading at that time. Since firing a fault relative to normal could be expensive.
 >    
 > **Result type of the Fetch Request** [Ref](https://ali-akhtar.medium.com/mastering-in-coredata-part-9-nsfetchrequest-d9ad991355d9)
 > 
