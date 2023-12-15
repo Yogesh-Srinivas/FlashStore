@@ -148,5 +148,22 @@ References:
 >
 >   The question that might be arised in your mind what is NSManagedObjectID we will look into this when we will be doing multiple managedObjectContext or in threading part as well . It’s not very helpful when we have only one NSManagedObjectContext. At this moment if you don’t understand anything about it it’s OK but one think you should take is that we can return NSMangedObjectId in fetch request as well by changing it’s resultType to NSManagedObjectID. It will surely optimize the performance when we need to transfer data between two contexts.
 
+### Multithreading Concurrency Rules [Ref](https://medium.com/@aliakhtar_16369/mastering-in-coredata-part-11-multithreading-concurrency-rules-70f1f221dbcd)
+
+> **NSMainQueueConcurrencyType:** is specifically for use with your application interface and can only be used on the main queue of an application which always run on main thread. As said it can only be used in your application interface (UI) related work. Avoid doing data processing on this. , Like importing data into Core Data from JSON
+>
+> **NSPrivateQueueConcurrencyType:** configuration creates its own queue upon initialization and can be used only on that queue. Because the queue is private and internal to the NSManagedObjectContext instance, it can only be accessed through the performBlock: and the performBlockAndWait: methods. We will look this in depth when we will be doing coding part.
+>
+> Core Data is designed to work in a multithreaded environment. However, not every object under the Core Data framework is thread safe. To use Core Data in a multithreaded environment, ensure that:
+> - Managed object contexts are bound to the thread (queue) that they are associated with upon initialization.
+> - Managed objects retrieved from a context are bound to the same queue that the context is bound to.
+>
+> **Rule Of thum**b : You can’t achieve concurrency in Core Data without using multiple context.
+>
+> 
+
+
+
+
   
 
