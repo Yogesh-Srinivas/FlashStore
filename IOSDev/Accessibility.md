@@ -20,3 +20,19 @@
 ### Navigation
 > - When there are more number of dataPoints, dont navigate each element. Split the intervals and navigate reasonably.
 > - 
+
+
+
+## Audio Graphs
+
+> **Continuous vs. Noncontinuous Data**
+> - In continuous data sets, each data point connects with its predecessor and follower. Audio Graphs presents that kind of data as a line chart.
+> - In noncontinuous data sets, also called discrete data sets, each data point is separated. The Audio Graph looks like a bar chart for categorical axes or shows circles for numerical axes.
+> - When a view supports Audio Graphs, this appears as an option on the VoiceOver rotor. It lets up and down swipes offer the following options for a graph:
+>   * Describe chart: Reads a description of the chart.
+>   * Play Audio Graph: Plays sounds based on the data in the chart.
+>   * Chart Details: Opens a separate screen so the user can navigate through more details.
+
+
+
+
