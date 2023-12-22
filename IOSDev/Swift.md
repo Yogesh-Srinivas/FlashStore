@@ -6,6 +6,7 @@
 1. https://medium.com/@PavloShadov/best-resources-for-advanced-ios-developer-swift-ade30374593d
 2. [Swift Tips and Tricks](https://www.hackingwithswift.com/articles/106/10-quick-swift-tips)
 3. [vincent Tips](https://www.swiftwithvincent.com/tips)
+4. [sundell Tips](https://github.com/JohnSundell/SwiftTips)
 
 # “do as the locals do”
 
@@ -29,7 +30,6 @@
 > - USe dump instead print, provides more info
 > - Use addAction clouse for UIButton instead addTarget
 > - You don't need to unwrap an optional value if you are going to compare it to an exact value.
->   
 >   ```swift
 >   //wrong
 >    var someOptionalString: String?
@@ -43,5 +43,6 @@
 > - Use value types over reference types
 > - Use higher-order functions - Swift supports higher-order functions like map, filter, and reduce to make your code more expressive and functional
 > - Use Generics for Flexible Code
+> - Adding support for Apple Pencil double-taps (its easy)
 
 
