@@ -30,13 +30,11 @@
 > - Use addAction clouse for UIButton instead addTarget
 > - You don't need to unwrap an optional value if you are going to compare it to an exact value.
 >   
->  **Wrong**
 >   ```swift
+>   //wrong
 >    var someOptionalString: String?
 >    if let stringValue = someOptionalString, stringValue.isEmpty { ... }
->   ```
->   **Right**
->   ```swift
+>   //right
 >    var someOptionalString: String?
 >    if stringValue?.isEmpty == false { ... }
 >   ```
