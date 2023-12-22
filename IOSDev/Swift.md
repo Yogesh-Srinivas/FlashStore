@@ -28,6 +28,18 @@
 > - Use opaque Arguments ("Some" for Generics)
 > - USe dump instead print, provides more info
 > - Use addAction clouse for UIButton instead addTarget
+> - You don't need to unwrap an optional value if you are going to compare it to an exact value.
+>   
+>  **Wrong**
+>   ```swift
+>    var someOptionalString: String?
+>    if let stringValue = someOptionalString, stringValue.isEmpty { ... }
+>   ```
+>   **Right**
+>   ```swift
+>    var someOptionalString: String?
+>    if stringValue?.isEmpty == false { ... }
+>   ```
 
 ### Best Practices
 > - Use value types over reference types
