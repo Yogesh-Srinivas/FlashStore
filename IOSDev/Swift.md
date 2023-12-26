@@ -45,4 +45,24 @@
 > - Use Generics for Flexible Code
 > - Adding support for Apple Pencil double-taps (its easy)
 
+## Tips
+**Swift's pattern matching capabilities are so powerful! Two enum cases with associated values can even be matched and handled by the same switch case - which is super useful when handling state changes with similar data.**
+```swift
+enum DownloadState {
+    case inProgress(progress: Double)
+    case paused(progress: Double)
+    case cancelled
+    case finished(Data)
+}
+
+func downloadStateDidChange(to state: DownloadState) {
+    switch state {
+    case .inProgress(let progress), .paused(let progress):
+        updateProgressView(with: progress)
+    case .cancelled:
+        showCancelledMessage()
+    case .finished(let data):
+        process(data)
+    }
+} 
 
