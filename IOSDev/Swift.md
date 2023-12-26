@@ -83,3 +83,20 @@ struct CodeSegment {
 
 handle(segment.tokens.current)
 ```
+**3. UserDefaults is a lot more powerful than what it first might seem like. Not only can it store more complex values (like dates & dictionaries) and parse command line arguments - it also enables easy sharing of settings & lightweight data between apps in the same App Group.**
+```swift
+let sharedDefaults = UserDefaults(suiteName: "my-app-group")!
+let useDarkMode = sharedDefaults.bool(forKey: "dark-mode")
+
+// This value is put into the shared suite.
+sharedDefaults.set(true, forKey: "dark-mode")
+
+// If you want to treat the shared settings as read-only (and add
+// local overrides on top of them), you can simply add the shared
+// suite to the standard UserDefaults.
+let combinedDefaults = UserDefaults.standard
+combinedDefaults.addSuite(named: "my-app-group")
+
+// This value is a local override, not added to the shared suite.
+combinedDefaults.set(true, forKey: "app-specific-override")
+```
