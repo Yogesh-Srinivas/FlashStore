@@ -46,7 +46,7 @@
 > - Adding support for Apple Pencil double-taps (its easy)
 
 ## Tips
-**Swift's pattern matching capabilities are so powerful! Two enum cases with associated values can even be matched and handled by the same switch case - which is super useful when handling state changes with similar data.**
+**1. Swift's pattern matching capabilities are so powerful! Two enum cases with associated values can even be matched and handled by the same switch case - which is super useful when handling state changes with similar data.**
 ```swift
 enum DownloadState {
     case inProgress(progress: Double)
@@ -64,5 +64,22 @@ func downloadStateDidChange(to state: DownloadState) {
     case .finished(let data):
         process(data)
     }
-} 
+}
+```
 
+**2. Here I'm using tuples to create a lightweight hierarchy for my data, giving me a nice structure without having to introduce any additional types.**
+```swift
+struct CodeSegment {
+    var tokens: (
+        previous: String?,
+        current: String
+    )
+
+    var delimiters: (
+        previous: Character?
+        next: Character?
+    )
+}
+
+handle(segment.tokens.current)
+```
