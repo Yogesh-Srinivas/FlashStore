@@ -100,3 +100,20 @@ combinedDefaults.addSuite(named: "my-app-group")
 // This value is a local override, not added to the shared suite.
 combinedDefaults.set(true, forKey: "app-specific-override")
 ```
+**4. One of the key features it brings is conditional conformances, which lets you have a type only conform to a protocol under certain constraints.**
+```swift
+protocol UnboxTransformable {
+    associatedtype RawValue
+
+    static func transform(_ value: RawValue) throws -> Self?
+}
+
+extension Array: UnboxTransformable where Element: UnboxTransformable {
+    typealias RawValue = [Element.RawValue]
+
+    static func transform(_ value: RawValue) throws -> [Element]? {
+        return try value.compactMap(Element.transform)
+    }
+}
+```
+
