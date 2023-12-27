@@ -161,5 +161,84 @@ let files = folder.makeFileSequence(recursive: true, includeHidden: true)
 
 let files = folder.files.recursive.includingHidden
 ```
+**7. Unlike static properties, class properties can be overridden by subclasses (however, they can't be stored, only computed).**
+```swift
+class TableViewCell: UITableViewCell {
+    class var preferredHeight: CGFloat { return 60 }
+}
 
+class TallTableViewCell: TableViewCell {
+    override class var preferredHeight: CGFloat { return 100 }
+}
+```
+**8. Using the zip function in Swift you can easily combine two sequences. Super useful when using two sequences to do some work, since zip takes care of all the bounds-checking.**
+```swift
+func render(titles: [String]) {
+    for (label, text) in zip(titleLabels, titles) {
+        print(text)
+        label.text = text
+    }
+}
+```
+
+**9. The awesome thing about option sets in Swift is that they can automatically either be passed as a single member or as a set. Even cooler is that you can easily define your own option sets as well, perfect for options and other non-exclusive values.**
+```swift
+// Option sets are awesome, because you can easily pass them
+// both using dot syntax and array literal syntax, like when
+// using the UIView animation API:
+UIView.animate(withDuration: 0.3,
+               delay: 0,
+               options: .allowUserInteraction,
+               animations: animations)
+
+UIView.animate(withDuration: 0.3,
+               delay: 0,
+               options: [.allowUserInteraction, .layoutSubviews],
+               animations: animations)
+
+// The cool thing is that you can easily define your own option
+// sets as well, by defining a struct that has an Int rawValue,
+// that will be used as a bit mask.
+extension Cache {
+    struct Options: OptionSet {
+        static let saveToDisk = Options(rawValue: 1)
+        static let clearOnMemoryWarning = Options(rawValue: 1 << 1)
+        static let clearDaily = Options(rawValue: 1 << 2)
+
+        let rawValue: Int
+    }
+}
+
+// We can now use Cache.Options just like UIViewAnimationOptions:
+Cache(options: .saveToDisk)
+Cache(options: [.saveToDisk, .clearDaily])
+```
+**10. Combine first class functions in Swift with the fact that Dictionary elements are (Key, Value) tuples and you can build yourself some pretty awesome functional chains when iterating over a Dictionary.**
+```swift
+func makeActor(at coordinate: Coordinate, for building: Building) -> Actor {
+    let actor = Actor()
+    actor.position = coordinate.point
+    actor.animation = building.animation
+    return actor
+}
+
+func render(_ buildings: [Coordinate : Building]) {
+    buildings.map(makeActor).forEach(add)
+}
+```
+**11. One really nice benefit of dropping suffixes from method names (and just using verbs, when possible) is that it becomes super easy to support both single and multiple arguments, and it works really well semantically.**
+```swift
+extension UIView {
+    func add(_ subviews: UIView...) {
+        subviews.forEach(addSubview)
+    }
+}
+
+view.add(button)
+view.add(label)
+
+// By dropping the "Subview" suffix from the method name, both
+// single and multiple arguments work really well semantically.
+view.add(button, label)
+```
 
