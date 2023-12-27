@@ -116,4 +116,50 @@ extension Array: UnboxTransformable where Element: UnboxTransformable {
     }
 }
 ```
+**5. Swift's & operator is awesome! Not only can you use it to compose protocols, you can compose other types too! Very useful if you want to hide concrete types & implementation details.**
+```swift
+protocol LoadableFromURL {
+    func load(from url: URL)
+}
+
+class ContentViewController: UIViewController, LoadableFromURL {
+    func load(from url: URL) {
+        ...
+    }
+}
+
+class ViewControllerFactory {
+    func makeContentViewController() -> UIViewController & LoadableFromURL {
+        return ContentViewController()
+    }
+}
+```
+**6. Combining lazily evaluated sequences with builder pattern-like properties can lead to some pretty sweet APIs for configurable sequences in Swift.
+Also useful for queries & other things you "build up" and then execute.**
+```swift
+// Extension adding builder pattern-like properties that return
+// a new sequence value with the given configuration applied
+extension FileSequence {
+    var recursive: FileSequence {
+        var sequence = self
+        sequence.isRecursive = true
+        return sequence
+    }
+
+    var includingHidden: FileSequence {
+        var sequence = self
+        sequence.includeHidden = true
+        return sequence
+    }
+}
+
+// BEFORE
+
+let files = folder.makeFileSequence(recursive: true, includeHidden: true)
+
+// AFTER
+
+let files = folder.files.recursive.includingHidden
+```
+
 
