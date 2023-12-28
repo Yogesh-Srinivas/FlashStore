@@ -279,4 +279,111 @@ view.transform = CGAffineTransform(scaleX: 2, y: 2)
 print(view.frame) // (-50.0, -50.0, 200.0, 200.0)
 print(view.bounds) // (0.0, 0.0, 100.0, 100.0)
 ```
+**14. Avoiding Massive View Controllers is all about finding the right levels of abstraction and splitting things up. My personal rule of thumb is that as soon as I have 3 methods or properties that have the same prefix, I break them out into their own type.**
+```swift
+// BEFORE
 
+class LoginViewController: UIViewController {
+    private lazy var signUpLabel = UILabel()
+    private lazy var signUpImageView = UIImageView()
+    private lazy var signUpButton = UIButton()
+}
+
+// AFTER
+
+class LoginViewController: UIViewController {
+    private lazy var signUpView = SignUpView()
+}
+
+class SignUpView: UIView {
+    private lazy var label = UILabel()
+    private lazy var imageView = UIImageView()
+    private lazy var button = UIButton()
+}
+```
+**15. I love the fact that optionals are enums in Swift - it makes it so easy to extend them with convenience APIs for certain types. Especially useful when doing things like data validation on optional values.**
+```swift
+func validateTextFields() -> Bool {
+    guard !usernameTextField.text.isNilOrEmpty else {
+        return false
+    }
+
+    ...
+
+    return true
+}
+
+// Since all optionals are actual enum values in Swift, we can easily
+// extend them for certain types, to add our own convenience APIs
+
+extension Optional where Wrapped == String {
+    var isNilOrEmpty: Bool {
+        switch self {
+        case let string?:
+            return string.isEmpty
+        case nil:
+            return true
+        }
+    }
+}
+
+// Since strings are now Collections in Swift 4, you can even
+// add this property to all optional collections:
+
+extension Optional where Wrapped: Collection {
+    var isNilOrEmpty: Bool {
+        switch self {
+        case let collection?:
+            return collection.isEmpty
+        case nil:
+            return true
+        }
+    }
+}
+```
+**16. You can turn any Swift Error into an NSError, which is super useful when pattern matching with a code 👍. Also, switching on optionals is pretty cool!**
+```swift
+let task = urlSession.dataTask(with: url) { data, _, error in
+    switch error {
+    case .some(let error as NSError) where error.code == NSURLErrorNotConnectedToInternet:
+        presenter.showOfflineView()
+    case .some(let error):
+        presenter.showGenericErrorView()
+    case .none:
+        presenter.renderContent(from: data)
+    }
+}
+
+task.resume()
+```
+**17. You can switch on a set using array literals as cases in Swift! Can be really useful to avoid many if/else if statements.**
+```swift
+class RoadTile: Tile {
+    var connectedDirections = Set<Direction>()
+
+    func render() {
+        switch connectedDirections {
+        case [.up, .down]:
+            image = UIImage(named: "road-vertical")
+        case [.left, .right]:
+            image = UIImage(named: "road-horizontal")
+        default:
+            image = UIImage(named: "road")
+        }
+    }
+}
+```
+**18. Playing around with an expressive way to check if a value matches any of a list of candidates in Swift:**
+```swift
+ // Instead of multiple conditions like this:
+
+if string == "One" || string == "Two" || string == "Three" {
+
+}
+
+// You can now do:
+
+if string == any(of: "One", "Two", "Three") {
+
+}
+```
