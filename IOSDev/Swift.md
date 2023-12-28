@@ -241,4 +241,42 @@ view.add(label)
 // single and multiple arguments work really well semantically.
 view.add(button, label)
 ```
+**12.Using the AnyObject (or class) constraint on protocols is not only useful when defining delegates (or other weak references), but also when you always want instances to be mutable without copying.**
+```swift
+// By constraining a protocol with 'AnyObject' it can only be adopted
+// by classes, which means all instances will always be mutable, and
+// that it's the original instance (not a copy) that will be mutated.
+protocol DataContainer: AnyObject {
+    var data: Data? { get set }
+}
+
+class UserSettingsManager {
+    private var settings: Settings
+    private let dataContainer: DataContainer
+
+    // Since DataContainer is a protocol, we an easily mock it in
+    // tests if we use dependency injection
+    init(settings: Settings, dataContainer: DataContainer) {
+        self.settings = settings
+        self.dataContainer = dataContainer
+    }
+
+    func saveSettings() throws {
+        let data = try settings.serialize()
+
+        // We can now assign properties on an instance of our protocol
+        // because the compiler knows it's always going to be a class
+        dataContainer.data = data
+    }
+}
+```
+**13.  A really interesting side-effect of a UIView's bounds being its rect within its own coordinate system is that transforms don't affect it at all. That's why it's usually a better fit than frame when doing layout calculations of subviews.**
+```swift
+let view = UIView()
+view.frame.size = CGSize(width: 100, height: 100)
+view.transform = CGAffineTransform(scaleX: 2, y: 2)
+
+print(view.frame) // (-50.0, -50.0, 200.0, 200.0)
+print(view.bounds) // (0.0, 0.0, 100.0, 100.0)
+```
 
