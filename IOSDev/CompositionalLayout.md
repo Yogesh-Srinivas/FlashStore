@@ -10,3 +10,13 @@
 ![image](https://miro.medium.com/v2/resize:fit:720/format:webp/1*Xm6Xe0OaYmSAlUoOxQ7WTg.png)
 
 
+* To build any compositional layout, the following four classes need to be implemented:
+
+  **NSCollectionLayoutSize** — The width and height dimensions are of the type NSCollectionLayoutDimension which can be defined by setting the fractional width/height of the layout (percentage relative to its container), or by setting the absolute or estimated sizes.
+  
+  **NSCollectionLayoutItem** — This is your layout’s cell that renders on the screen based on the size.
+  
+  **NSCollectionLayoutGroup** — It holds the NSCollectionLayoutItem in either horizontal, vertical, or custom forms.
+  
+  **NSCollectionLayoutSection** — This is used to initialize the section by passing along the NSCollectionLayoutGroup. Sections eventually compose the compositional layouts.
+
