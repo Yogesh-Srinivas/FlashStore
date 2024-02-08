@@ -4,6 +4,10 @@
 - https://developer.apple.com/documentation/uikit/accessibility_for_uikit/supporting_voiceover_in_your_app
 - [Audio Graph - kodeco](https://www.kodeco.com/31561694-ios-accessibility-in-swiftui-create-accessible-charts-using-audio-graphs)
 
+## Voice over References
+- https://www.blog.kevin-hirsch.com/voice-over-vs-symbols-and-units/
+- https://exyte.com/blog/things-we-wish-we-knew-about-ios-voice-over
+
 ---
 - know that there’s a naming convention that can be used to avoid typing down a-c-c-e-s-s-i-b-i-l-i-t-y each and every time time you create a variable for a label or an identifier. This naming convention is a11y.
 
