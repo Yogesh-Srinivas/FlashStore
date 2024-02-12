@@ -1,7 +1,7 @@
 # Compositional Layout
 
 ### References
-1. https://betterprogramming.pub/ios-13-compositional-layouts-in-collectionview-90a574b410b8
+1. [iOS 13 Compositional Layouts in CollectionView](https://betterprogramming.pub/ios-13-compositional-layouts-in-collectionview-90a574b410b8)
 2. [The Power of UICollectionView Compositional Layout ](https://medium.com/@oradwan037/the-power-of-uicollectionview-compositional-layout-swift-uikit-ec2d817eb15c)
 
 ---
