@@ -19,7 +19,7 @@
 1. [Building Faster in Xcode](https://developer.apple.com/videos/play/wwdc2018/408/)
 2. [Getting to Know Swift Package Manager](https://developer.apple.com/videos/play/wwdc2018/411/)
 
-### Swift UI
+### Swift UI & UIKit
 
 1. [Introduction to Siri Shortcuts](https://developer.apple.com/videos/play/wwdc2018/211/)
 2. [Optimizing App Assets](https://developer.apple.com/videos/play/wwdc2018/227/)
