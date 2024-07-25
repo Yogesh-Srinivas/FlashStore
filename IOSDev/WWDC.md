@@ -162,3 +162,20 @@
 6. [Swift packages: Resources and localization](https://developer.apple.com/videos/play/wwdc2020/10169/)
 7. [VoiceOver efficiency with custom rotors](https://developer.apple.com/videos/play/wwdc2020/10116/)
 
+### App Services
+
+1. [Add configuration and intelligence to your widgets](https://developer.apple.com/videos/play/wwdc2020/10194/)
+2. [Build SwiftUI views for widgets](https://developer.apple.com/videos/play/wwdc2020/10033/)
+3. [Design for intelligence: Apps, evolved](https://developer.apple.com/videos/play/wwdc2020/10086/)
+4. [Design for intelligence: Discover new opportunities](https://developer.apple.com/videos/play/wwdc2020/10088/)
+5. [Design for intelligence: Make friends with "The System"](https://developer.apple.com/videos/play/wwdc2020/10087/)
+6. [Design for intelligence: Meet people where they are](https://developer.apple.com/videos/play/wwdc2020/10200/)
+7. [Design high quality Siri media interactions](https://developer.apple.com/videos/play/wwdc2020/10060/)
+8. [Empower your intents](https://developer.apple.com/videos/play/wwdc2020/10073/)
+9. [Expand your SiriKit Media Intents to more platforms
+](https://developer.apple.com/videos/play/wwdc2020/10061/)
+10. [Feature your actions in the Shortcuts app
+](https://developer.apple.com/videos/play/wwdc2020/10084/)
+11. [What's new in SiriKit and Shortcuts](https://developer.apple.com/videos/play/wwdc2020/10068/)
+12. [What's new in Wallet and Apple Pay](https://developer.apple.com/videos/play/wwdc2020/10662/)
+13. [Widgets Code-along, part 3: Advancing timelines](https://developer.apple.com/videos/play/wwdc2020/10036/)
