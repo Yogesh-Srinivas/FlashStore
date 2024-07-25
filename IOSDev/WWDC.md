@@ -179,3 +179,19 @@
 11. [What's new in SiriKit and Shortcuts](https://developer.apple.com/videos/play/wwdc2020/10068/)
 12. [What's new in Wallet and Apple Pay](https://developer.apple.com/videos/play/wwdc2020/10662/)
 13. [Widgets Code-along, part 3: Advancing timelines](https://developer.apple.com/videos/play/wwdc2020/10036/)
+
+### App Store Distribution & Marketing
+
+1. [What's new in App Store Connect](https://developer.apple.com/videos/play/wwdc2020/10651/)
+2. [What’s new with in-app purchase](https://developer.apple.com/videos/play/wwdc2020/10661/)
+
+### Business & Education
+
+1. [Build scalable enterprise app suites](https://developer.apple.com/videos/play/wwdc2020/10142/)
+2. [Create custom apps for employees](https://developer.apple.com/videos/play/wwdc2020/10222/)
+3. []()
+4. []()
+5. []()
+6. []()
+7. []()
+8. []()
