@@ -80,17 +80,74 @@
 17. [What's New in App Store Connect](https://developer.apple.com/videos/play/wwdc2019/301/)
 18. [What's New in Clang and LLVM](https://developer.apple.com/videos/play/wwdc2019/409/)
 19. [What's New in Xcode 11](https://developer.apple.com/videos/play/wwdc2019/401/)
+20. [Debugging in Xcode 11](https://developer.apple.com/videos/play/wwdc2019/412/)
 
+### Privacy and Security
 
+1. [Advances in macOS Security](https://developer.apple.com/videos/play/wwdc2019/701/)
+2. [Cryptography and Your Apps](https://developer.apple.com/videos/play/wwdc2019/709/)
+3. [Designing for Privacy](https://developer.apple.com/videos/play/wwdc2019/708/)
+4. [Introducing Sign In with Apple](https://developer.apple.com/videos/play/wwdc2019/706/)
 
+### Web
 
+1. [Auditing Web Content with Web Inspector](https://developer.apple.com/videos/play/wwdc2019/514/)
+2. [Embedding and Sharing Visually Rich Links](https://developer.apple.com/videos/play/wwdc2019/262/)
+3. [Supporting Dark Mode in Your Web Content](https://developer.apple.com/videos/play/wwdc2019/511/)
+4. [Understanding CPU Usage with Web Inspector](https://developer.apple.com/videos/play/wwdc2019/513/)
+5. [What's New for Web Developers](https://developer.apple.com/videos/play/wwdc2019/518/)
+6. [What's New in Authentication](https://developer.apple.com/videos/play/wwdc2019/516/)
+7. [What's New in Safari](https://developer.apple.com/videos/play/wwdc2019/515/)
+8. [What's New in Universal Links](https://developer.apple.com/videos/play/wwdc2019/717/)
 
+### Swift
 
+1. [Creating Swift Packages](https://developer.apple.com/videos/play/wwdc2019/410/)
+2. [Swift Playgrounds 3](https://developer.apple.com/videos/play/wwdc2019/405/)
+3. [What's New in Swift](https://developer.apple.com/videos/play/wwdc2019/402/)
 
+### SwiftUI and UI Frameworks
 
+1. [Accessibility in SwiftUI](https://developer.apple.com/videos/play/wwdc2019/238/)
+2. [Advances in Collection View Layout](https://developer.apple.com/videos/play/wwdc2019/215/)
+3. [Architecting Your App for Multiple Windows](https://developer.apple.com/videos/play/wwdc2019/258/)
+4. [Building Custom Views with SwiftUI](https://developer.apple.com/videos/play/wwdc2019/237/)
+5. [Core NFC Enhancements](https://developer.apple.com/videos/play/wwdc2019/715/)
+6. [Creating an Accessible Reading Experience](https://developer.apple.com/videos/play/wwdc2019/248/)
+7. [Data Flow Through SwiftUI](https://developer.apple.com/videos/play/wwdc2019/226/)
+8. [Font Management and Text Scaling](https://developer.apple.com/videos/play/wwdc2019/227/)
+9. [Implementing Dark Mode on iOS]https://developer.apple.com/videos/play/wwdc2019/214/()
+10. [Integrating SwiftUI](https://developer.apple.com/videos/play/wwdc2019/231/)
+11. [Introducing Desktop-class Browsing on iPad](https://developer.apple.com/videos/play/wwdc2019/203/)
+12. [Introducing Multiple Windows on iPad](https://developer.apple.com/videos/play/wwdc2019/212/)
+13. [Introducing PencilKit](https://developer.apple.com/videos/play/wwdc2019/221/)
+14. [Introducing SwiftUI: Building Your First App](https://developer.apple.com/videos/play/wwdc2019/204/)
+15. [Introducing iPad Apps for Mac](https://developer.apple.com/videos/play/wwdc2019/205/)
+16. [Large Content Viewer - Ensuring Readability for Everyone](https://developer.apple.com/videos/play/wwdc2019/261/)
+17. [Making Apps More Accessible With Custom Actions](https://developer.apple.com/videos/play/wwdc2019/250/)
+18. [Making Apps with Core Data](https://developer.apple.com/videos/play/wwdc2019/230/)
+19. [Modernizing Your UI for iOS 13](https://developer.apple.com/videos/play/wwdc2019/224/)
+20. [ResearchKit and CareKit Reimagined](https://developer.apple.com/videos/play/wwdc2019/217/)
+21. [SwiftUI Essentials](https://developer.apple.com/videos/play/wwdc2019/216/)
+22. [SwiftUI On All Devices](https://developer.apple.com/videos/play/wwdc2019/240/)
+23. [Taking iPad Apps for Mac to the Next Level](https://developer.apple.com/videos/play/wwdc2019/235/)
+24. [Targeting Content with Multiple Windows](https://developer.apple.com/videos/play/wwdc2019/259/)
+25. [Using Core Data With CloudKit](https://developer.apple.com/videos/play/wwdc2019/202/)
+26. [What’s New in AppKit for macOS](https://developer.apple.com/videos/play/wwdc2019/210/)
+27. [What’s New in File Management and Quick Look](https://developer.apple.com/videos/play/wwdc2019/719/)
+28. [Window Management in Your Multitasking App](https://developer.apple.com/videos/play/wwdc2019/246/)
+29. [Writing Great Accessibility Labels](https://developer.apple.com/videos/play/wwdc2019/254/)
 
+### System Service
 
-
-
+1. [Advances in Foundation](https://developer.apple.com/videos/play/wwdc2019/723/)
+2. [Advances in Networking, Part 1](https://developer.apple.com/videos/play/wwdc2019/712/)
+3. [Advances in Networking, Part 2](https://developer.apple.com/videos/play/wwdc2019/713/)
+4. [Advances in UI Data Sources](https://developer.apple.com/videos/play/wwdc2019/220/)
+5. [Combine in Practice](https://developer.apple.com/videos/play/wwdc2019/721/)
+6. [Introducing Accelerate for Swift](https://developer.apple.com/videos/play/wwdc2019/718/)
+7. [Introducing Combine](https://developer.apple.com/videos/play/wwdc2019/722/)
+8. [What's New in Apple File Systems](https://developer.apple.com/videos/play/wwdc2019/710/)
+9. [What's New in Core Bluetooth](https://developer.apple.com/videos/play/wwdc2019/901/)
 
 
