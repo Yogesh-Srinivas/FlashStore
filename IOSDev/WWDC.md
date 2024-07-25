@@ -116,7 +116,7 @@
 6. [Creating an Accessible Reading Experience](https://developer.apple.com/videos/play/wwdc2019/248/)
 7. [Data Flow Through SwiftUI](https://developer.apple.com/videos/play/wwdc2019/226/)
 8. [Font Management and Text Scaling](https://developer.apple.com/videos/play/wwdc2019/227/)
-9. [Implementing Dark Mode on iOS]https://developer.apple.com/videos/play/wwdc2019/214/()
+9. [Implementing Dark Mode on iOS](https://developer.apple.com/videos/play/wwdc2019/214/)
 10. [Integrating SwiftUI](https://developer.apple.com/videos/play/wwdc2019/231/)
 11. [Introducing Desktop-class Browsing on iPad](https://developer.apple.com/videos/play/wwdc2019/203/)
 12. [Introducing Multiple Windows on iPad](https://developer.apple.com/videos/play/wwdc2019/212/)
