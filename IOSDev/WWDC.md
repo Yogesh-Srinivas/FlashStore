@@ -150,4 +150,15 @@
 8. [What's New in Apple File Systems](https://developer.apple.com/videos/play/wwdc2019/710/)
 9. [What's New in Core Bluetooth](https://developer.apple.com/videos/play/wwdc2019/901/)
 
+## 2020
+
+### Accessibility & Inclusion
+
+1. [A conversation with Lisa Jackson and former Attorney General Eric Holder](https://developer.apple.com/videos/play/wwdc2020/10970/)
+2. [Build location-aware enterprise apps](https://developer.apple.com/videos/play/wwdc2020/10140/)
+3. [Create a seamless speech experience in your apps](https://developer.apple.com/videos/play/wwdc2020/10022/)
+4. [Formatters: Make data human-friendly](https://developer.apple.com/videos/play/wwdc2020/10160/)
+5. [Swan's Quest, Chapter 1: Voices in the dark](https://developer.apple.com/videos/play/wwdc2020/10681/)
+6. [Swift packages: Resources and localization](https://developer.apple.com/videos/play/wwdc2020/10169/)
+7. [VoiceOver efficiency with custom rotors](https://developer.apple.com/videos/play/wwdc2020/10116/)
 
