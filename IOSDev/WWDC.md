@@ -189,9 +189,30 @@
 
 1. [Build scalable enterprise app suites](https://developer.apple.com/videos/play/wwdc2020/10142/)
 2. [Create custom apps for employees](https://developer.apple.com/videos/play/wwdc2020/10222/)
-3. []()
-4. []()
-5. []()
-6. []()
-7. []()
-8. []()
+3. [Custom app distribution with Apple Business Manager](https://developer.apple.com/videos/play/wwdc2020/10667/)
+4. [Swan's Quest, Chapter 4: The sequence completes](https://developer.apple.com/videos/play/wwdc2020/10684/)
+
+### Design
+
+1. [App accessibility for Switch Control](https://developer.apple.com/videos/play/wwdc2020/10019/)
+2. [Build for the iPadOS pointer](https://developer.apple.com/videos/play/wwdc2020/10093/)
+3. [Design great App Clips](https://developer.apple.com/videos/play/wwdc2020/10172/)
+4. [Design great widgets](https://developer.apple.com/videos/play/wwdc2020/10103/)
+5. [Designed for iPad](https://developer.apple.com/videos/play/wwdc2020/10206/)
+6. [Evaluate and optimize voice interaction for your app](https://developer.apple.com/videos/play/wwdc2020/10071/)
+7. [Make your app visually accessible](https://developer.apple.com/videos/play/wwdc2020/10020/)
+8. [The details of UI typography](https://developer.apple.com/videos/play/wwdc2020/10175/)
+9. [The winners of the 2020 Apple Design Awards](https://developer.apple.com/videos/play/wwdc2020/20022/)
+
+### Developer Tools
+
+
+
+
+
+
+
+
+
+
+
